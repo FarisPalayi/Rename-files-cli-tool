@@ -22,3 +22,15 @@ async function _allFiles(folderPath) {
     .then((file) => file)
     .catch((err) => console.log("Error reading file names \n", err));
 }
+
+async function _rename(folderPath, file, keyword) {
+  const fullFilePath = path.join(folderPath, file);
+  const newFileName = file.replace(keyword, "");
+  const newFilePath = path.join(folderPath, newFileName);
+
+  if (file.includes(keyword)) {
+    await rename(fullFilePath, newFilePath)
+      .then(() => process.stdout.write(`${file} ►▶ ${newFileName} ✅\n`))
+      .catch((err) => console.log("Error renaming files \n", err));
+  }
+}
