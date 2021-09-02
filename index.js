@@ -16,3 +16,9 @@ rl.question(`\nKeyword to remove from the filename? eg: min\n`,
     }
   }
 )
+
+async function _allFiles(folderPath) {
+  return await readdir(folderPath, "utf-8")
+    .then((file) => file)
+    .catch((err) => console.log("Error reading file names \n", err));
+}
