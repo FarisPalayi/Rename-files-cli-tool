@@ -8,3 +8,8 @@ if the keyword is `min` and there's a file named `img-min.jpg` in the current di
 Note: It'll only remove the first occurrence of the keyword from the filename.<br>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       ie. in the previous example, if the filename were `img-min-min.jpg`, it'd be renamed to `img--.jpg`.
+
+## Run:
+```
+node index
+```
